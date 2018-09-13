@@ -46,7 +46,7 @@
           </div>
           <div class="medium-12  columns">
             <label>Email</label>
-            <input name="email" type="text">
+            <input name="email" type="text" value="{{old('email')}}">
             <small class="error">{{$errors->first('email')}}</small>
           </div>
           <div class="medium-12  columns">
