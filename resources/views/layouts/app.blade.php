@@ -25,16 +25,16 @@
     <!-- End Top Bar -->
 
     <br>
-    
-    
-    
+
+
+
 @yield('content')
-    
+
 
     <div class="row column">
       <hr>
       <ul class="menu">
-        <li class="float-right">Copyright 2017</li>
+        <li class="float-right">Copyright 2018</li>
       </ul>
     </div>
 
@@ -50,9 +50,9 @@
         <script src="{{ asset('pickadate/lib/picker.date.js') }}"></script>
         <script>
             $('.datepicker').pickadate(
-              { 
+              {
                 format: 'yyyy-mm-dd',
-                formatSubmit: 'yyyy-mm-dd' 
+                formatSubmit: 'yyyy-mm-dd'
               }
               );
         </script>
