@@ -13,5 +13,6 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         //
+        '*'//WILD CARD THAT DISABLES CSRF PROTECTIPN
     ];
 }
