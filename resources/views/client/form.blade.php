@@ -17,6 +17,7 @@
           <div class="medium-4  columns">
             <label>Name</label>
             <input name="name" type="text" value="{{old('name')}}">
+            <!-- OLD ALLOWS TO STORE PREVIOUS VALUE-->
             <small class="error">{{$errors->first('name')}}</small>
           </div>
           <div class="medium-4  columns">
