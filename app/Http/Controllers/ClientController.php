@@ -9,9 +9,10 @@ use App\Client as Client;
 class ClientController extends Controller
 {
     //
-    public function __construct( Title $titles )
+    public function __construct( Title $titles ,Client $Client)
     {
         $this->titles = $titles->all();
+        $this->client=$Client;
     }
 
     public function di()
@@ -22,21 +23,7 @@ class ClientController extends Controller
     public function index()
     {
         $data=[];
-        $obj = new \stdClass;
-        $obj->id = 1;
-        $obj->title = 'mr';
-        $obj->name = 'john';
-        $obj->last_name = 'doe';
-        $obj->email = 'john@domain.com';
-        $data['clients'][]=$obj;
-
-        $obj = new \stdClass;
-        $obj->id = 2;
-        $obj->title = 'ms';
-        $obj->name = 'jane';
-        $obj->last_name = 'doe';
-        $obj->email = 'jane@another-domain.com';
-        $data['clients'][]=$obj;
+        $data['clients']=$this->client->all();
         return view('client/index',$data);
     }
 
@@ -85,6 +72,15 @@ class ClientController extends Controller
         $data=[];
         $data['titles']= $this->titles;
         $data['modify']=1;
+        $client_data=$this->client->find($client_id);
+        $data['title']=$client_data->title;
+        $data['name']=$client_data->name;
+        $data['last_name']=$client_data->last_name;
+        $data['address']=$client_data->address;
+        $data['zip_code']=$client_data->zip_code;
+        $data['city']=$client_data->city;
+        $data['state']=$client_data->state;
+        $data['email']=$client_data->email;
         return view('client/form',$data);
     }
 }
