@@ -27,7 +27,7 @@ Route::get('/book/room/{client_id}/{room_id}/{date_in}/{date_out}', 'Reservation
 
 Route::get('/about', function () {
     $response_arr = [];
-    $response_arr['author'] = 'BP';
+    $response_arr['author'] = 'Peter Chencha';
     $response_arr['version'] = '0.1.1';
     return $response_arr;
     //return '<h3>About</h3>';
