@@ -18,7 +18,7 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
+/*
     public function testTitlesModelCount()
     {
       $title = new Title;
@@ -33,4 +33,5 @@ class ExampleTest extends TestCase
       $title_array = $title->all();
       $this->assertEquals('Professor',array_pop($title_array),'Titles last element should be professor.');
     }
+*/
 }
